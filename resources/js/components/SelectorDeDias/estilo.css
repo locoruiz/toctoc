@@ -1,0 +1,72 @@
+.barraFecha {
+    background: #FFFFFF;
+    border: 1px solid #E3FFFF;
+    box-sizing: border-box;
+    border-radius: 72.5px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
+    border-radius: 73.5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botonFecha {
+    background: #F5F8FF;
+    box-shadow: 0px 100px 161px rgba(33, 94, 233, 0.08), 0px 64.8148px 94.2894px rgba(33, 94, 233, 0.0607407), 0px 38.5185px 51.2815px rgba(33, 94, 233, 0.0485926), 0px 20px 26.1625px rgba(33, 94, 233, 0.04), 0px 8.14815px 13.1185px rgba(33, 94, 233, 0.0314074), 0px 1.85185px 6.33565px rgba(33, 94, 233, 0.0192593);
+    border-radius: 80px;
+
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #6E4E9B;
+
+    width: fit-content;
+    text-align: center;
+
+    margin-left: 5px;
+    margin-right: 10px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.botonFecha:hover {
+    background: #6E4E9A !important;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.botonFecha b {
+    color: #AA7EB5;
+}
+
+.botonFechaElegido {
+    background: #78CCF2;
+    box-shadow: 0px 100px 161px rgba(33, 94, 233, 0.08), 0px 64.8148px 94.2894px rgba(33, 94, 233, 0.0607407), 0px 38.5185px 51.2815px rgba(33, 94, 233, 0.0485926), 0px 20px 26.1625px rgba(33, 94, 233, 0.04), 0px 8.14815px 13.1185px rgba(33, 94, 233, 0.0314074), 0px 1.85185px 6.33565px rgba(33, 94, 233, 0.0192593);
+    border-radius: 80px;
+
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #6E4E9B;
+
+    width: fit-content;
+    text-align: center;
+
+    margin-left: 5px;
+    margin-right: 10px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}

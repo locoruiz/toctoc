@@ -1,0 +1,87 @@
+
+body {
+    background-color: #EBF1FF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+h1 {
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 101.8%;
+    /* or 45px */
+
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 101.8%;
+    /* or 24px */
+
+    letter-spacing: -0.01em;
+}
+
+.frame852 {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .frame852 {
+        border-radius: 20px;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+    }
+  }
+
+.btn-secondary{
+    /*formatting goes here*/
+    color: #FFFFFF
+}
+
+.btn-secondary:active{
+    /*formatting goes here*/
+    color: #FFFFFF
+}
+.btn-secondary:disabled{
+    /*formatting goes here*/
+    color: #FFFFFF
+}
+.btn-secondary:hover{
+    /*formatting goes here*/
+    color: #FFFFFF
+}
+
+.btn-secondary:focus{
+    /*formatting goes here*/
+    color: #FFFFFF
+}
+
+.PhoneInputInput {
+    border: none;
+}
