@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer';
 import PrivateRoute from './PrivateRoute';
 import Direcciones from './views/user/Direcciones/Direcciones';
 import Servicios from './views/Servicios/Servicios';
+import Calculadora from './components/Calculadora/Calculadora';
 
 export const Main = props => (
     <div className='frame852'>
@@ -18,6 +19,7 @@ export const Main = props => (
     <Switch>
         {/*user might be logged in*/}
         <Route exact path='/' component={Home}/>
+        <Route exact path='/solicitar' component={Calculadora}/>
         {/*User will login*/}
         <Route path='/login' component={Login}/>
         {/*user is logged in*/}

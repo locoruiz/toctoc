@@ -30,6 +30,11 @@ const Header = props => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Link href="#" onClick={() => {irA('/')}}>Inicio</Nav.Link>
+                    
+                    {
+                        props.location.pathname !== '/solicitar' &&
+                        <Nav.Link onClick={() => {irA('/solicitar')}}>Solicitar</Nav.Link>
+                    }
                     {
                         props.userStore.isLoggedIn && props.location.pathname !== '/direcciones' &&
                         <Nav.Link  onClick={() => {irA('/direcciones')}}>Mis direcciones</Nav.Link>
