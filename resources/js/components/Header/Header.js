@@ -3,7 +3,7 @@ import { Link, NavLink, withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../../../assets/toctoc.jpeg';
+import logo from '../../../assets/logo.svg';
 
 const Header = props => {
     const logOut = () => {
@@ -21,8 +21,8 @@ const Header = props => {
 
     return (
         <Navbar  expand="md">
-            <Navbar.Brand href="#" onClick={() => {irA('/')}} className={display+' d-md-block'}>
-                <img src={logo} height='100'/>
+            <Navbar.Brand href="#" style={{paddingLeft: '30px', paddingTop: '20px'}} onClick={() => {irA('/')}} className={display+' d-md-block'}>
+                <img src={logo} />
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" style={{marginBottom: '20px'}}/>

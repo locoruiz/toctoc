@@ -26,7 +26,7 @@
 }
 
 .checkbox:hover {
-    background: #6E4E9A !important;
+    background: #081047 !important;
     color: #FFFFFF !important;
     font-weight: normal;
 }
@@ -49,10 +49,10 @@
 
     height: 42.32px;
 
-    background: #78CCF2;
+    background: #D888A2;
     border-radius: 80px;
 
-    color: #6E4E9A;
+    color: #081047;
     
     padding: 11px;
 }

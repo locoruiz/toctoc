@@ -1079,7 +1079,7 @@ const Calculadora = (props) => {
                                                         paddingRight: '8px'
                                                     }}
                                                 >
-                                                    <Spray style={{marginRight: '10px'}} color={tipo === 'normal' || hover === 'normal' ? 'white' : '#6E4E9B'}/>
+                                                    <Spray style={{marginRight: '10px'}} color={tipo === 'normal' || hover === 'normal' ? 'white' : '#081047'}/>
                                                 </div>
                                             </div>
                                             <div>
@@ -1096,7 +1096,7 @@ const Calculadora = (props) => {
                                                         alignItems: 'center'
                                                     }}
                                                 >
-                                                    <Materiales color={tipo === 'profunda' || hover === 'profunda' ? 'white' : '#6E4E9B'}/>
+                                                    <Materiales color={tipo === 'profunda' || hover === 'profunda' ? 'white' : '#081047'}/>
                                                 </div>
                                             </div>
                                             <div>
@@ -1113,7 +1113,7 @@ const Calculadora = (props) => {
                                                         alignItems: 'center'
                                                     }}
                                                 >
-                                                    <Plancha color={tipo === 'planchar' || hover === 'planchar' ? 'white' : '#6E4E9B'}/>
+                                                    <Plancha color={tipo === 'planchar' || hover === 'planchar' ? 'white' : '#081047'}/>
                                                 </div>
                                             </div>
                                         </div>
@@ -1128,13 +1128,13 @@ const Calculadora = (props) => {
                                             onMouseLeave={() => setHover('')}
                                         >
                                             <Col xs={0} md={3} className='text-center p-0'>
-                                                <Spray color={tipo === 'normal' || hover === 'normal' ? 'white' : '#6E4E9B'}/>
+                                                <Spray color={tipo === 'normal' || hover === 'normal' ? 'white' : '#081047'}/>
                                             </Col>
                                             <Col xs={9} md={6} className='text-center p-0'>
                                                 Limpieza estándar
                                             </Col>
                                             <Col xs={2} className='text-left p-0'>
-                                                <Info color={hover === 'normal' ? 'white' : '#6E4E9B'} onClick={() => {
+                                                <Info color={hover === 'normal' ? 'white' : '#081047'} onClick={() => {
                                                     setMostrarModalInfo(true);
                                                 }}/>
                                             </Col>
@@ -1148,13 +1148,13 @@ const Calculadora = (props) => {
                                             onMouseLeave={() => setHover('')}
                                         >
                                             <Col xs={0} md={3} className='text-right p-0'>
-                                                <Materiales color={tipo === 'profunda' || hover === 'profunda' ? 'white' : '#6E4E9B'}/>
+                                                <Materiales color={tipo === 'profunda' || hover === 'profunda' ? 'white' : '#081047'}/>
                                             </Col>
                                             <Col xs={10} md={7} className='text-center p-0'>
                                                 Limpieza<br/>profunda
                                             </Col>
                                             <Col xs={2} className='text-left p-0'>
-                                                <Info color={hover === 'profunda' ? 'white' : '#6E4E9B'} 
+                                                <Info color={hover === 'profunda' ? 'white' : '#081047'} 
                                                     onClick={() => {setMostrarModalInfo(true)}}
                                                 />
                                             </Col>
@@ -1168,13 +1168,13 @@ const Calculadora = (props) => {
                                             onMouseLeave={() => setHover('')}
                                         >
                                             <Col xs={0} md={3} className='text-right p-0'>
-                                                <Plancha color={tipo === 'planchar' || hover === 'planchar' ? 'white' : '#6E4E9B'}/>
+                                                <Plancha color={tipo === 'planchar' || hover === 'planchar' ? 'white' : '#081047'}/>
                                             </Col>
                                             <Col xs={10} md={7} className='text-center p-0'>
                                                 Planchado
                                             </Col>
                                             <Col xs={2} className='text-left p-0'>
-                                                <Info color={hover === 'planchar' ? 'white' : '#6E4E9B'} 
+                                                <Info color={hover === 'planchar' ? 'white' : '#081047'} 
                                                     onClick={() => {setMostrarModalInfo(true)}}
                                                 />
                                             </Col>
@@ -1197,7 +1197,7 @@ const Calculadora = (props) => {
                                     {
                                         (tipo === 'normal' || tipo === 'planchar') &&
                                             <div style={{marginLeft: '10px', fontSize: '1rem'}}>
-                                                <Info color='#6E4E9B' onClick={() => {
+                                                <Info color='#081047' onClick={() => {
                                                 setMostrarModalInfo(true);
                                             }}/>
                                         </div>
@@ -1360,7 +1360,7 @@ const Calculadora = (props) => {
                                         <Col className='text-center align-self-center' xs={12} md={2}
                                             style={{fontSize: '20px',
                                                     lineHeight: '24px',
-                                                    color: '#6E4E9B'}}
+                                                    color: '#081047'}}
                                         >
                                             Con
                                         </Col>
@@ -1566,7 +1566,7 @@ const Calculadora = (props) => {
                                     className={'boton seleccionado'}
                                     style={{
                                         backgroundColor: '#F5F8FF', 
-                                        color: '#6E4E9B', 
+                                        color: '#081047', 
                                         cursor: 'default',
                                         borderRadius: '30px'
                                     }}
@@ -1587,7 +1587,7 @@ const Calculadora = (props) => {
                                     className={'boton seleccionado'}
                                     style={{
                                         backgroundColor: '#F5F8FF', 
-                                        color: '#6E4E9B', 
+                                        color: '#081047', 
                                         cursor: 'default',
                                         borderRadius: '30px'
                                     }}
@@ -1608,7 +1608,7 @@ const Calculadora = (props) => {
                                     className={'boton seleccionado'}
                                     style={{
                                         backgroundColor: '#F5F8FF', 
-                                        color: '#6E4E9B', 
+                                        color: '#081047', 
                                         cursor: 'default',
                                         borderRadius: '30px'
                                     }}
@@ -1643,7 +1643,7 @@ const Calculadora = (props) => {
                             <p className='centrado'><Reloj/> <span style={{color: '#000', marginLeft: '15px'}}>{horasCompartidas} horas</span></p>
                             <p className='centrado'><User/> <span style={{color: '#000', marginLeft: '15px'}}>{profesionales} {profesionales > 1 ? 'profesionales' : 'profesional'}</span></p>
                             <div className='divisor'></div>
-                            <p className='centrado'><Dolar/> <span className='precio'>Bs. {precio.toFixed(2)}</span></p>
+                            <p className='centrado'><Dolar/> <span className='precio'>Bs. <span style={{color: 'white'}}>{precio.toFixed(2)}</span></span></p>
                         </div>
                     </div>
                 </Col>

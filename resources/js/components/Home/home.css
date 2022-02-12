@@ -1,18 +1,20 @@
 
 .recuadro1 {
+    position: relative;
     margin-top: 71px;
-    margin-left: 71px;
+    margin-left: clamp(10px, 5vw, 71px);
 
-    max-width: 540px;
+    width: clamp(100px, 50%, 540px);
 
     text-align: center;
+    z-index: 4;
 }
 
 .recuadro1 h1 {
     font-family: Product Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 65px;
+    font-size: clamp(40px, 4vw, 65px);
     line-height: 101.8%;
     /* or 66px */
 
@@ -32,6 +34,10 @@
     opacity: 0.7;
 }
 
+.lineas-izq {
+    max-width: 50%;
+}
+
 .botones {
     display: flex;
     max-width: 406px;
@@ -46,4 +52,239 @@
 
 .botones > :last-child {
     width: 100%;
+}
+
+.recuadro2 {
+    position: absolute;
+    top: 300px;
+    right: 0;
+    z-index: 2;
+    max-width: 40%;
+}
+
+.recuadro3 {
+    top: -50px;
+    right: -200px;
+    position: absolute;
+    z-index: 3;
+}
+
+.recuadro4 {
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    max-width: 40%;
+    z-index: 3;
+}
+
+.barra-medio {
+    margin-top: -50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background: #FFF2F6;
+    box-shadow: inset 0px 4px 9px rgba(155, 182, 206, 0.25);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 5;
+}
+
+.barra-medio :first-child {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.barra-medio :not(:first-child) {
+    max-width: 100%;
+    min-width: 0px;
+    z-index: 2;
+}
+
+.recuadro5 {
+    margin-top: 43px;
+    margin-left: auto;
+    margin-right: 100px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.recuadro5 :first-child {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 101.8%;
+    /* or 39px */
+
+    text-align: right;
+    letter-spacing: -0.01em;
+
+    color: #7D8790;
+}
+
+.recuadro5 :last-child {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 101.8%;
+    /* or 66px */
+
+    text-align: right;
+    letter-spacing: -0.01em;
+
+    color: #F6AAC3;
+}
+
+.pasos {
+    position: relative;
+    z-index: 5;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 200px;
+    column-gap: 64px;
+}
+
+.pasos > div {
+    display: grid;
+    grid-template-columns: 121px auto;
+    column-gap: 40px;
+    row-gap: 1rem;
+}
+
+.pasos .numero {
+    grid-row: 1 / span 2;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+
+    background: #161547;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 101.8%;
+    /* identical to box height, or 87px */
+
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.pasos .numero .logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -25%);
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #7ACADE;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+
+    object-fit: scale-down;
+}
+
+.pasos :last-child .numero .logo {
+    background: #D888A2;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pasos .tit {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 101.8%;
+    /* or 31px */
+
+    letter-spacing: -0.01em;
+
+    color: #000000 !important;
+}
+
+.pasos .descripcion {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 101.8%;
+    /* or 20px */
+
+    letter-spacing: -0.01em;
+
+    color: #7D8790;
+}
+
+.mano {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    max-width: 50%;
+    z-index: 4;
+}
+
+.mano img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.porcientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.porcientos .redondo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 18px #EBF1FF;
+    gap: 7px;
+    padding: 20px;
+}
+
+.porcientos .redondo > :first-child {
+    font-weight: bold;
+    font-size: clamp(30px, 2.9vw, 55px);
+    line-height: calc(clamp(30px, 2.9vw, 55px) + 10px);
+    /* identical to box height */
+
+    letter-spacing: -2px;
+
+    color: #333333;
+}
+
+.porcientos .redondo > :last-child {
+    font-weight: normal;
+    font-size: clamp(10px, 1.9vw, 16px);
+    line-height: calc(clamp(10px, 2.9vw, 16px) + 9px);
+    /* or 150% */
+
+    text-align: center;
+
+    color: #000000;
 }

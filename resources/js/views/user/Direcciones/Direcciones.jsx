@@ -319,7 +319,7 @@ const Direcciones = (props) => {
                                 let style = {};
                                 if (direccionSeleccionada && item.id == direccionSeleccionada.id) {
                                     style = {
-                                        backgroundColor:'#78ccf2'
+                                        backgroundColor:'#D888A2'
                                     };
                                 }
                                 return (
