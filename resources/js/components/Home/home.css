@@ -288,3 +288,201 @@
 
     color: #000000;
 }
+
+.comentarios {
+    text-align: center;
+    margin-top: 84px;
+    color: #F6AAC3;
+}
+
+.comentarios h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 101.8%;
+    /* identical to box height, or 46px */
+
+    letter-spacing: -0.01em;
+}
+
+.comentarios .comments {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(2px, 2vw, 35px);
+}
+
+.comments .cards {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+
+    background: #FFFFFF;
+    backdrop-filter: blur(30px);
+
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 14px rgba(183, 136, 188, 0.37));
+}
+
+.comments .cards > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.comments img {
+    border: none;
+    width: 77px;
+    height: 77px;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.comments .cards .medalla {
+    width: 26px;
+    height: 41px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    border-radius: unset;
+}
+
+.comments .cards .nombre {
+    text-align: left;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.comments .cards .comentario {
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+
+    color: #7D8790;
+}
+
+.agentes {
+    position: relative;
+    display: flex;
+    margin-top: 181px;
+    margin-right: clamp(0px, 3vw, 85px);
+    justify-content: flex-end;
+    align-items: center;
+    gap: clamp(10px, 5vw, 115px);
+    z-index: 2;
+}
+
+.agentes .textos {
+    text-align: right;
+}
+
+.agentes .textos :first-child {
+    font-size: 17px;
+    line-height: 24px;
+    /* or 141% */
+
+    text-align: right;
+
+    color: #7D8790;
+    text-transform: uppercase;
+}
+
+.agentes .textos :nth-child(2) {
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 60px;
+
+    text-align: right;
+
+    color: #161547;
+
+    margin-top: 14px;
+    margin-bottom: 29px;
+}
+
+.agentes .textos :last-child {
+    font-size: 27px;
+    line-height: 28px;
+    text-align: right;
+    color: #7D8790;
+}
+
+.pagos {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 206px;
+    justify-content: space-around;
+    margin-left: clamp(10px, 4vw, 40px);
+    margin-right: clamp(10px, 4vw, 40px);
+    gap: clamp(10px, 5vw, 115px);
+    z-index: 2;
+}
+
+.pagos > img {
+    display: block;
+    max-width: clamp(200px, 30vw, 550px);
+    aspect-ratio: 1.8;
+    object-fit: contain;
+}
+
+.pagos-text > div:first-child {
+    font-size: 17px;
+    line-height: 24px;
+    color: #7D8790;
+}
+
+
+.pagos-text > div:nth-child(2) {
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 58px;
+    color: #2F93CE;
+    margin-top: 14px;
+}
+
+.pagos-text .resaltar {
+    color: #61B77C;
+}
+
+.pagos-text > div:nth-child(3) {
+    margin-top: 76px;
+    font-size: 27px;
+    line-height: 28px;
+    color: #7D8790;
+}
+
+
+.vector9 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 500px;
+}
+
+.vector10 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .comentarios .comments {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(5px, 3vw, 35px);
+    }
+}

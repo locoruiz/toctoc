@@ -980,7 +980,7 @@ const Calculadora = (props) => {
                     <img src={dolarPrecio} className='dolarPrecio'/>
                     <span className='span'>
                         <p className='precioMobile'>Bs. <span style={{color: 'white'}}>{precio.toFixed(2)}</span></p>
-                        <p className='horaMobile'>por <span style={{color: '#00CBE7'}}>{horas}</span> horas de <span style={{color: '#00CBE7'}}>trabajo</span></p>
+                        <p className='horaMobile'>por <span style={{color: '#081047'}}>{horas}</span> horas de <span style={{color: '#081047'}}>trabajo</span></p>
                     </span>
                     <button onClick={() => {toggleNav()}}><img src={hamburger}/></button>
                 </Col>

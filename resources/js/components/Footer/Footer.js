@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Footer = () => (<footer>Roscosoft © Todos los derechos reservados</footer>);
+const Footer = () => (<footer></footer>);
 
 export default Footer;

@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import { Link, NavLink, withRouter } from 'react-router-dom';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../../assets/logo.svg';
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 const Header = props => {
+    const windowWidth = useWindowWidth();
+
     const logOut = () => {
         props.userStore.logOut();
         props.history.push('/login');
@@ -17,31 +20,57 @@ const Header = props => {
 
     let esAdmin = props.userStore.user && props.userStore.user.role === 'Admin';
 
-    let display  = props.location.pathname !== '/' ? 'd-block' : 'd-none';
+    let linkStyles = {
+        fontWeight: 'bold',
+        fontSize: '16px',
+        lineHeight: '19px',
+        color: '#7D8790'
+    }
+
+    let estaEnSolicitar = props.location.pathname === '/solicitar';
+
+    let estiloToggle = {margin: '20px', borderRadius: '5px'}
+
+    if (estaEnSolicitar) {
+        estiloToggle.visibility = 'hidden';
+        estiloToggle.margin = 0;
+    }
+
+    const navStyle = {alignItems: 'center', borderRadius: '10px'};
+
+    if (windowWidth < 760) {
+        navStyle.backgroundColor = '#33333333';
+    }
+ 
 
     return (
-        <Navbar  expand="md">
-            <Navbar.Brand href="#" style={{paddingLeft: '30px', paddingTop: '20px'}} onClick={() => {irA('/')}} className={display+' d-md-block'}>
-                <img src={logo} />
-            </Navbar.Brand>
+        <Navbar  expand="md" style={{position: 'relative', zIndex: 5}}>
+            {
+                props.location.pathname !== '/solicitar' &&
+                <Navbar.Brand href="#" onClick={() => {irA('/')}} >
+                    <img style={{height: '50px'}} src={logo} />
+                </Navbar.Brand>
+            }
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" style={{marginBottom: '20px'}}/>
+            <Navbar.Toggle aria-controls={"basic-navbar-nav"} style={estiloToggle}/>
             
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto">
-                    <Nav.Link href="#" onClick={() => {irA('/')}}>Inicio</Nav.Link>
-                    
+                <Nav className="ml-auto" style={navStyle}>
+                    {
+                        props.location.pathname !== '/' &&
+                        <Nav.Link href="#" onClick={() => {irA('/')}} style={linkStyles}>Inicio</Nav.Link>
+                    }
                     {
                         props.location.pathname !== '/solicitar' &&
-                        <Nav.Link onClick={() => {irA('/solicitar')}}>Solicitar</Nav.Link>
+                        <Nav.Link onClick={() => {irA('/solicitar')}}  style={linkStyles}>Solicitar</Nav.Link>
                     }
                     {
                         props.userStore.isLoggedIn && props.location.pathname !== '/direcciones' &&
-                        <Nav.Link  onClick={() => {irA('/direcciones')}}>Mis direcciones</Nav.Link>
+                        <Nav.Link  onClick={() => {irA('/direcciones')}}  style={linkStyles}>Mis direcciones</Nav.Link>
                     }
                     {
                         props.userStore.isLoggedIn && props.location.pathname !== '/servicios' &&
-                        <Nav.Link  onClick={() => {irA('/servicios')}}>
+                        <Nav.Link  onClick={() => {irA('/servicios')}}  style={linkStyles}>
                             {
                                 esAdmin ? 'Todos los servicios' : 'Mis Servicios'
                             }
@@ -50,12 +79,12 @@ const Header = props => {
                     
                     {
                         props.userStore.isLoggedIn &&
-                        <Nav.Link onClick={logOut}>Salir</Nav.Link>
+                        <Nav.Link onClick={logOut}  style={linkStyles}>Salir</Nav.Link>
                     }
                     {
                         !props.userStore.isLoggedIn && 
                         props.location.pathname !== '/login' &&
-                        <><Nav.Link onClick={() => {irA('/login')}}>Ingresar</Nav.Link></>
+                        <><Nav.Link onClick={() => {irA('/login')}}  style={linkStyles}>Ingresar</Nav.Link></>
                     }
                 </Nav>
             </Navbar.Collapse>
