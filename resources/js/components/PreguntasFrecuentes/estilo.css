@@ -65,5 +65,34 @@
 @media (max-width: 900px) {
     .preguntas-frecuentes {
         width: clamp(200px, 90%, 677px);
+        padding: 21px;
+        margin-top: 50px;
+    }
+    .preguntas-frecuentes img {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        transform: translateY(-50%);
+        width: 37px;
+        height: 37px;
+        object-fit: contain;
+    }
+    .preguntas-frecuentes h3 {
+        font-size: 25px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .preguntas-frecuentes .pregunta {
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .preguntas-frecuentes .respuesta {
+        font-size: 10px;
+        line-height: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .preguntas-frecuentes .linea {
+        margin-bottom: 10px;
     }
 }

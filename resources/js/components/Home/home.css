@@ -206,7 +206,7 @@
 }
 
 .pasos :last-child .numero .logo {
-    background: #D888A2;
+    background: #F0CD0A;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -248,9 +248,8 @@
 
 .porcientos {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 32px;
 }
 
 .porcientos .redondo {
@@ -258,7 +257,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 180px;
+    width: clamp(105px, 25vw, 180px);
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: #FFFFFF;
@@ -272,7 +271,6 @@
     font-size: clamp(30px, 2.9vw, 55px);
     line-height: calc(clamp(30px, 2.9vw, 55px) + 10px);
     /* identical to box height */
-
     letter-spacing: -2px;
 
     color: #333333;
@@ -283,9 +281,7 @@
     font-size: clamp(10px, 1.9vw, 16px);
     line-height: calc(clamp(10px, 2.9vw, 16px) + 9px);
     /* or 150% */
-
     text-align: center;
-
     color: #000000;
 }
 
@@ -476,7 +472,117 @@
     z-index: 1;
 }
 
+.textos-mobile {
+    display: none;
+}
+.agente-texto-mobile {
+    display: none;
+}
+
 @media (max-width: 900px) {
+
+    .recuadro1 {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 37px;
+
+        width: clamp(100px, 100%, 540px);
+
+        z-index: 5;
+    }
+
+    .recuadro1 .titulo {
+        text-align: left;
+        font-size: 25px;
+        line-height: 101.8%;
+        /* or 25px */
+
+        letter-spacing: -0.01em;
+    }
+
+    .recuadro1 .subtitulo1 {
+        margin-top: clamp(120px, 30vw,120px);
+        transform: translateX(-37px);
+        font-size: 20px;
+        line-height: 30px;
+        
+        color: #1F71B8;
+        opacity: 0.7;
+    }
+
+    .botones {
+        max-width: 90%;
+        transform: translateX(-37px);
+    }
+
+    .mano {
+        top: calc(200px - 20vw);
+        max-width: 70%;
+    }
+
+    .porcientos {
+        position: relative;
+        margin-top: calc(250px - 14vw);
+        width: 140%;
+        transform: translateX(-30%);
+    }
+
+    .porcientos .redondo {
+        padding: 0;
+        gap: 0;
+    }
+
+    .barra-medio {
+        margin-top: 150px;
+        width: calc(100% + 20px);
+        transform: translateX(-10px);
+    }
+
+    .recuadro5 {
+        margin-right: 22px;
+    }
+
+    .recuadro5 :first-child {
+        font-size: 20px;
+    }
+    
+    .recuadro5 :last-child {
+        font-size: 35px;
+    }
+
+    .pasos {
+        row-gap: 67px;
+        column-gap: 20px;
+    }
+
+    .pasos > div {
+        display: grid;
+        grid-template-columns: 40px auto;
+        column-gap: 12px;
+        row-gap: 1rem;
+    }
+    
+    .pasos .numero {
+        grid-row: 1 / span 2;
+        width: 38px;
+        height: 38px;
+        font-size: 27px;
+    }
+    
+    .pasos .numero .logo {
+        width: 18px;
+        height: 18px;
+        object-fit: scale-down;
+    }
+
+    .pasos .tit {
+        font-size: 10px;
+    }
+    
+    .pasos .descripcion {
+        font-size: 9px;
+    }
+
     .comentarios .comments {
         margin-top: 30px;
         display: flex;
@@ -485,4 +591,93 @@
         align-items: center;
         gap: clamp(5px, 3vw, 35px);
     }
+
+    /*Agentes*/
+    .textos-mobile {
+        position: relative;
+        display: block;
+        margin-top: 40px;
+        z-index: 4;
+    }
+
+    .textos-mobile > div:first-child {
+        font-size: 17px;
+        line-height: 24px;
+        /* or 141% */
+        color: #7D8790;
+    }
+    .textos-mobile > div:last-child {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 38px;
+        color: #081047;
+    }
+
+    .agentes {
+        margin-top: 50px;
+        margin-right:24px;
+        gap: 20px;
+        z-index: 2;
+    }
+
+    .agentes .textos {
+        display: none;
+    }
+    .agente-texto-mobile {
+        display: block;
+        font-size: 10px;
+        line-height: 14px;
+        /* or 140% */
+
+        text-align: right;
+
+        color: #7D8790;
+    }
+    .agente {
+        max-width: 50%;
+    }
+
+    /*Pagos*/
+    .pagos {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+        margin-left: clamp(10px, 4vw, 40px);
+        margin-right: 30px;
+        gap: 15px;
+        z-index: 2;
+    }
+    
+    .pagos > img {
+        display: block;
+        max-width: 100%;
+        aspect-ratio: 1.8;
+        object-fit: contain;
+    }
+    
+    .pagos-text > div:first-child {
+        display: none;
+    }
+    
+    
+    .pagos-text > div:nth-child(2) {
+        font-size: 35px;
+        line-height: 34px;
+        /* or 97% */
+
+        text-align: right;
+    }
+    
+    .pagos-text .resaltar {
+        color: #61B77C;
+    }
+    
+    .pagos-text > div:nth-child(3) {
+        font-size: 15px;
+        line-height: 24px;
+        /* or 160% */
+
+        text-align: right;
+        margin-top: 14px;
+    }
+    
 }

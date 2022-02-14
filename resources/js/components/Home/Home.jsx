@@ -23,6 +23,7 @@ import medalla from '../../../assets/medalla.svg';
 import agente from '../../../assets/agente.svg';
 import celu from '../../../assets/celu.svg';
 import PreguntasFrecuentes from '../PreguntasFrecuentes/PreguntasFrecuentes';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     
@@ -31,7 +32,7 @@ const Home = () => {
         <div className='recuadro1'>
             <h1 className='titulo'>La forma más fácil<br/> y confiable de<br/> cuidar tu hogar</h1>
             <p className='subtitulo1'>¿Querés dejar implecable tu:</p>
-            <div className='barra botones'><Button variant='primary' size='lg'>Hogar</Button> <Button variant='secondary' size='lg'>Empresa</Button> </div>
+            <div className='barra botones'><Link to={'/solicitar'}><Button variant='primary' size='lg'>Hogar</Button></Link><Link to={'/solicitar'}><Button variant='secondary' size='lg'>Empresa</Button></Link></div>
         </div>
         <div className="mano">
             <img src={mano} alt='mano limpiando'/>
@@ -111,13 +112,21 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <div className="textos-mobile">
+            <div>Confianza</div>
+            <div>Agentes de Confianza</div>
+        </div>
         <div className="agentes">
+            
             <div className='textos'>
                 <div>Confianza</div>
                 <div>Agentes de Confianza</div>
                 <div>Profecionales experimentados que atraviesan un periodo de adaptación para trabajar con nosotros</div>
             </div>
-            <img src={agente} alt="agente" />
+            <div className="agente-texto-mobile">
+                Profesionales experimentados que atraviesan un período de adaptación para trabajar con nosotros.
+            </div>
+            <img src={agente} alt="agente" className='agente'/>
         </div>
         <div className="pagos">
             <img src={celu} alt="Pago" className="celu"/>
@@ -133,6 +142,7 @@ const Home = () => {
         </div>
 
         <PreguntasFrecuentes/>
+
         <img src={vector9} alt="simbolo" className="vector9" />
         <img src={vector10} alt="simbolo" className="vector10" />
         </>
