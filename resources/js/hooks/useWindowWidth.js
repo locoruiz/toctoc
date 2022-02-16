@@ -7,6 +7,9 @@ export default () => {
         window.addEventListener('resize', (w, e) => {
             setWidth(window.innerWidth);
         })
+        return () => {
+            window.removeEventListener('resize')
+        }
     }, [])
 
     return width;

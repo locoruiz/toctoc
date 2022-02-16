@@ -1032,8 +1032,7 @@ const Calculadora = (props) => {
                                 <Row className='mt-2'>
                                     <Col>
                                         <select 
-                                            className='form-control' 
-                                            style={{maxWidth: '200px', borderRadius: '30px'}}
+                                            className='select-ciudad'
                                             value={direccion}
                                             onChange={(e) => {setDireccion(e.target.value)}}
                                             >

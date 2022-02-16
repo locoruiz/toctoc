@@ -7,10 +7,11 @@
     width: clamp(100px, 50%, 540px);
 
     text-align: center;
-    z-index: 4;
+    z-index: 5;
 }
 
 .recuadro1 h1 {
+    text-align: justify;
     font-family: Product Sans;
     font-style: normal;
     font-weight: bold;
@@ -22,6 +23,7 @@
 }
 
 .subtitulo1 {
+    margin-top: 60px;
     font-family: Product Sans;
     font-style: normal;
     font-weight: normal;
@@ -29,6 +31,8 @@
     line-height: 30px;
     /* identical to box height, or 100% */
 
+
+    text-align: left;
     color: #1F71B8;
 
     opacity: 0.7;
@@ -38,19 +42,28 @@
     max-width: 50%;
 }
 
-.botones {
+.barra-botones {
     display: flex;
-    max-width: 406px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -5px;
     gap: 23px;
+
+    padding-top: 8.74px;
+    padding-bottom: 8.01px;
+    padding-left: 10.02px;
+    padding-right: 10.02px;
+
+    background: #FFFFFF;
+    border: 1px solid #E3FFFF;
+    box-sizing: border-box;
+    border-radius: 72.5px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 20px 13px rgba(0, 0, 0, 0.035), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
 }
 
-.botones > :first-child {
+.barra-botones > :first-child {
     width: 100%;
 }
 
-.botones > :last-child {
+.barra-botones > :last-child {
     width: 100%;
 }
 
@@ -145,8 +158,8 @@
     position: relative;
     z-index: 5;
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 40px;
+    margin-right: 40px;
     max-width: 1000px;
 
     display: grid;
@@ -289,6 +302,7 @@
     text-align: center;
     margin-top: 84px;
     color: #F6AAC3;
+    padding-left: 40px;
 }
 
 .comentarios h3 {
@@ -305,7 +319,7 @@
     margin-top: 42px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: clamp(2px, 2vw, 35px);
 }
 
@@ -502,17 +516,14 @@
 
     .recuadro1 .subtitulo1 {
         margin-top: clamp(120px, 30vw,120px);
-        transform: translateX(-37px);
         font-size: 20px;
         line-height: 30px;
         
         color: #1F71B8;
         opacity: 0.7;
     }
-
-    .botones {
+    .barra-botones {
         max-width: 90%;
-        transform: translateX(-37px);
     }
 
     .mano {
@@ -583,13 +594,28 @@
         font-size: 9px;
     }
 
+    .comentarios h3 {
+        font-size: 35px;
+        text-align: left;
+    }
+
     .comentarios .comments {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: clamp(5px, 3vw, 35px);
+    }
+
+    .comments .cards .nombre {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .comments .cards .comentario {
+        font-size: 16px;
+        line-height: 17px;
     }
 
     /*Agentes*/
@@ -597,6 +623,7 @@
         position: relative;
         display: block;
         margin-top: 40px;
+        margin-left: 40px;
         z-index: 4;
     }
 
@@ -616,6 +643,7 @@
     .agentes {
         margin-top: 50px;
         margin-right:24px;
+        margin-left: 40px;
         gap: 20px;
         z-index: 2;
     }

@@ -48,7 +48,7 @@ const Header = props => {
             {
                 props.location.pathname !== '/solicitar' &&
                 <Navbar.Brand href="#" onClick={() => {irA('/')}} >
-                    <img style={{height: '50px'}} src={logo} />
+                    <img style={{height: '50px', marginTop: '10px', marginLeft: '10px'}} src={logo} />
                 </Navbar.Brand>
             }
 

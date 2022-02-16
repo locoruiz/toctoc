@@ -26,13 +26,13 @@ import PreguntasFrecuentes from '../PreguntasFrecuentes/PreguntasFrecuentes';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    
+    console.log("render home");
     return (
         <>
         <div className='recuadro1'>
             <h1 className='titulo'>La forma más fácil<br/> y confiable de<br/> cuidar tu hogar</h1>
-            <p className='subtitulo1'>¿Querés dejar implecable tu:</p>
-            <div className='barra botones'><Link to={'/solicitar'}><Button variant='primary' size='lg'>Hogar</Button></Link><Link to={'/solicitar'}><Button variant='secondary' size='lg'>Empresa</Button></Link></div>
+            <p className='subtitulo1'>Querés dejar implecable tu:</p>
+            <div className='barra-botones'><Link to={'/solicitar'}><Button variant='primary' size='lg' block>Hogar</Button></Link><Link to={'/solicitar'}><Button variant='secondary' size='lg'  block>Empresa</Button></Link></div>
         </div>
         <div className="mano">
             <img src={mano} alt='mano limpiando'/>
@@ -84,7 +84,7 @@ const Home = () => {
             </div>
         </div>
         <div className="comentarios">
-            <h3>Comentarios destacados</h3>
+            <h3>Comentarios <br/> destacados</h3>
             <div className="comments">
                 <div className="cards">
                     <img src={angela}/>
